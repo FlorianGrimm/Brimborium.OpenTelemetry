@@ -115,6 +115,9 @@ class FileContentList {
         if ($folder.StartsWith($this.SolutionDir) -eq $false) {
             throw "Folder $folder is not in SolutionDir $this.SolutionDir"
         }
+        if ((Test-Path $folder) -eq $false) {
+            return
+        }
         [System.Collections.Generic.List[string]] $listRelativeFile = [System.Collections.Generic.List[string]]::new()
         [System.IO.FileInfo[]]$listFileInfo = Get-ChildItem -LiteralPath $folder -Recurse | ? { $_.PSIsContainer -eq $false -and $_ -is [System.IO.FileInfo] }
         [System.IO.FileInfo[]]$listFileInfoFiltered = $listFileInfo | ? { $this.IsExcludedFileInfo($_) -eq $false }
@@ -125,7 +128,7 @@ class FileContentList {
             if ($fullName.StartsWith($solutionDirWithSeparator) -eq $false) {
                 continue
             }
-            [string]$relativePath  = $fullName.Substring($solutionDirWithSeparator.Length)
+            [string]$relativePath = $fullName.Substring($solutionDirWithSeparator.Length)
             $this.AddFile($relativePath, "") | Out-Null
         }
     }
@@ -209,11 +212,11 @@ class FileContentList {
         return [System.IO.Path]::Combine($this.SolutionDir, $relativePath)
     }
     WriteFile([string] $relativePath, [string] $content) {
-        [string]$fullPath = GetAbsolutePath($relativePath)
+        [string]$fullPath = $this.GetAbsolutePath($relativePath)
         [System.IO.File]::WriteAllText($fullPath, $content)
     }
     DeleteFile([string] $relativePath) {
-        [string]$fullPath = GetAbsolutePath($relativePath)
+        [string]$fullPath = $this.GetAbsolutePath($relativePath)
         if (Test-Path $fullPath) {
             Remove-Item $fullPath
         }
@@ -271,28 +274,116 @@ class FileContentList {
     }
 }
 
+class ContentMapping {
+    [FileContentList] $Src
+    [FileContentList] $Dst
+    ContentMapping([FileContentList] $src, [FileContentList] $dst) {
+        $this.Src = $src
+        $this.Dst = $dst
+    }
+    static [ContentMapping] Create(
+        [string] $SolutionDir,
+        [string] $srcFilelistPath,
+        [string] $srcPath,
+        [string] $dstPath) {
+        return [ContentMapping]::new(
+            [FileContentList]::new($srcPath, $SolutionDir, $srcFilelistPath),
+            [FileContentList]::new($dstPath, $SolutionDir, ""))
+    }
+    FilelistRead([bool] $saveAll) {
+        $this.Src.Load()
+        $this.Src.ScanFolderInit()
+        $this.Src.ScanFolder($this.Src.SolutionDir)
+        $this.Src.ScanFolderDone($true)
+        $this.Src.Save($saveAll)
+    }
+    FilelistDiff() {
+        $this.Src.Load()
+        $this.Src.ScanFolderInit()
+        $this.Src.ScanFolder($this.Src.SolutionDir)
+        $this.Src.ScanFolderDone($true)
+        $this.Dst.Clear()
+        $this.Dst.ScanFolder($this.Dst.SolutionDir)
+        $this.Src.Diff($this.Dst)
+    }
+
+    FilelistUpdate([bool] $saveAll) {
+        $this.Src.Load()
+        # $this.Src.ScanFolderInit()
+        # $this.Src.ScanFolder($this.Src.SolutionDir)
+        # $this.Src.ScanFolderDone($true)
+        $this.Dst.Clear()
+        $this.Dst.ScanFolder($this.Dst.SolutionDir)
+        $this.Src.UpdateAction($this.Dst)
+        $this.Src.Save($saveAll)
+    }
+
+    FilelistCopy() {
+        $this.Src.Load()
+        $this.Dst.Clear()
+        $this.Dst.ScanFolder($this.Dst.SolutionDir)
+        $this.Src.Execute($this.Dst)
+    }
+}
+
 # try {
 [string] $SolutionDir = [System.IO.Path]::GetDirectoryName($PSScriptRoot)
-    
-[string] $FilelistOtelDotNetJsonPath = [System.IO.Path]::Combine($SolutionDir, "build", "filelist-opentelemetry-dotnet.json")
-[string] $SrcOtelDotNet = [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet")
-[string] $DstOtelDotNet = [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "opentelemetry-dotnet")
-
-[string] $FilelistOtelContribJsonPath = [System.IO.Path]::Combine($SolutionDir, "build", "filelist-opentelemetry-dotnet-contrib.json")
-[string] $SrcOtelContrib = [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet-contrib")
-[string] $DstOtelContrib = [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "opentelemetry-dotnet-contrib")
-
-    
-[FileContentList] $fclSrcOtelDotNet = [FileContentList]::new($SrcOtelDotNet, $SolutionDir, $FilelistOtelDotNetJsonPath)
-[FileContentList] $fclSrcOtelContrib = [FileContentList]::new($SrcOtelContrib, $SolutionDir, $FilelistOtelContribJsonPath)
-[FileContentList] $fclDstOtelDotNet = [FileContentList]::new($DstOtelDotNet, $SolutionDir, "")
-[FileContentList] $fclDstOtelContrib = [FileContentList]::new($DstOtelContrib, $SolutionDir, "")
-
-[string] $SolutionFile = [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "Brimborium.OpenTelemetry.sln")
 write-host "`$SolutionDir='$($SolutionDir)'"
-write-host "`$SolutionFile='$($SolutionFile)'"
-write-host "`$SrcOtelDotNet='$($SrcOtelDotNet)'"
-write-host "`$SrcOtelContrib='$($SrcOtelContrib)'"
+[System.Collections.Generic.List[ContentMapping]] $listContentMapping = [System.Collections.Generic.List[ContentMapping]]::new()
+
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Shared.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet", "src", "Shared"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry.Shared")
+    )
+)
+
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet", "src", "OpenTelemetry"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "OpenTelemetry", "OpenTelemetry")
+    )
+)
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Api.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet", "src", "OpenTelemetry.Api"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "OpenTelemetry", "OpenTelemetry.Api")
+    )
+)
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Api-ProviderBuilderExtensions.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet", "src", "OpenTelemetry.Api.ProviderBuilderExtensions"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "OpenTelemetry", "OpenTelemetry.Api.ProviderBuilderExtensions")
+    )
+)
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Exporter-Console.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet", "src", "OpenTelemetry.Exporter.Console"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "OpenTelemetry", "OpenTelemetry.Exporter.Console")
+    )
+)
+<#
+OpenTelemetry.Extensions.Hosting
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Exporter-InMemory.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet", "src", "OpenTelemetry.Exporter.InMemory"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "OpenTelemetry", "OpenTelemetry.Exporter.InMemory")
+    )
+)
+#>
+[string] $SolutionFile = [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "Brimborium.OpenTelemetry.sln")
 
 [string[]] $listAction = $action.Split(",")
 foreach ($currentAction in $listAction) {
@@ -351,73 +442,30 @@ foreach ($currentAction in $listAction) {
     if ($currentAction -eq "filelist-read") {
         $actionKnown = $true
         write-host "filelist-read"
-
-        $fclSrcOtelDotNet.Load()
-        $fclSrcOtelDotNet.ScanFolderInit()
-        $fclSrcOtelDotNet.ScanFolder($fclSrcOtelDotNet.SolutionDir)
-        $fclSrcOtelDotNet.ScanFolderDone($true)
-        $fclSrcOtelDotNet.Save($saveAll)
-
-        $fclSrcOtelContrib.Load()
-        $fclSrcOtelContrib.ScanFolderInit()
-        $fclSrcOtelContrib.ScanFolder($fclSrcOtelContrib.SolutionDir)
-        $fclSrcOtelContrib.ScanFolderDone($true)
-        $fclSrcOtelContrib.Save($saveAll)
+        foreach ($cm in $listContentMapping) {
+            $cm.FilelistRead($saveAll)
+        }
     }
     if ($currentAction -eq "filelist-diff") {
         $actionKnown = $true
         write-host "filelist-diff"
-
-        $fclSrcOtelDotNet.Load()
-        $fclSrcOtelDotNet.ScanFolderInit()
-        $fclSrcOtelDotNet.ScanFolder($fclSrcOtelDotNet.SolutionDir)
-        $fclSrcOtelDotNet.ScanFolderDone($true)
-        $fclDstOtelDotNet.Clear()
-        $fclDstOtelDotNet.ScanFolder($fclDstOtelDotNet.SolutionDir)
-        $fclSrcOtelDotNet.Diff($fclDstOtelDotNet)
-
-        $fclSrcOtelContrib.Load()
-        $fclSrcOtelContrib.ScanFolderInit()
-        $fclSrcOtelContrib.ScanFolder($fclSrcOtelContrib.SolutionDir)
-        $fclSrcOtelContrib.ScanFolderDone($true)
-        $fclSrcOtelContrib.Clear()
-        $fclDstOtelContrib.ScanFolder($fclDstOtelContrib.SolutionDir)
-        $fclSrcOtelContrib.Diff($fclDstOtelContrib)
+        foreach ($cm in $listContentMapping) {
+            $cm.FilelistDiff()
+        }
     }
     if ($currentAction -eq "filelist-update") {
         $actionKnown = $true
         write-host "filelist-update"
-
-        $fclSrcOtelDotNet.Load()
-        # $fclSrcOtelDotNet.ScanFolderInit()
-        # $fclSrcOtelDotNet.ScanFolder($fclSrcOtelDotNet.SolutionDir)
-        # $fclSrcOtelDotNet.ScanFolderDone($true)
-        $fclDstOtelDotNet.Clear()
-        $fclDstOtelDotNet.ScanFolder($fclDstOtelDotNet.SolutionDir)
-        $fclSrcOtelDotNet.UpdateAction($fclDstOtelDotNet)
-        $fclSrcOtelDotNet.Save($saveAll)
-
-        $fclSrcOtelContrib.Load()
-        # $fclSrcOtelContrib.ScanFolderInit()
-        # $fclSrcOtelContrib.ScanFolder($fclSrcOtelContrib.SolutionDir)
-        # $fclSrcOtelContrib.ScanFolderDone($true)
-        $fclSrcOtelContrib.Clear()
-        $fclDstOtelContrib.ScanFolder($fclDstOtelContrib.SolutionDir)
-        $fclSrcOtelContrib.UpdateAction($fclDstOtelContrib)
-        $fclSrcOtelContrib.Save($saveAll)
+        foreach ($cm in $listContentMapping) {
+            $cm.FilelistUpdate($saveAll)
+        }
     }
     if ($currentAction -eq "filelist-copy") {
         $actionKnown = $true
         write-host "filelist-copy"
-        $fclSrcOtelDotNet.Load()
-        $fclDstOtelDotNet.Clear()
-        $fclDstOtelDotNet.ScanFolder($fclDstOtelDotNet.SolutionDir)
-        $fclSrcOtelDotNet.Execute($fclDstOtelDotNet)
-
-        $fclSrcOtelContrib.Load()
-        $fclSrcOtelContrib.Clear()
-        $fclDstOtelContrib.ScanFolder($fclDstOtelContrib.SolutionDir)
-        $fclSrcOtelContrib.Execute($fclDstOtelContrib)
+        foreach ($cm in $listContentMapping) {
+            $cm.FilelistCopy()
+        }
     }
     if ($false -eq $actionKnown) {
         throw "unknown action: $currentAction"

@@ -1,0 +1,526 @@
+[
+  {
+    "RelativePath": ".publicApi\\Experimental\\PublicAPI.Unshipped.txt",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": ".publicApi\\Stable\\PublicAPI.Shipped.txt",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": ".publicApi\\Stable\\PublicAPI.Unshipped.txt",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": "BaseExporter.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "BaseExportProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "BaseProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Batch.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "BatchExportProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "BatchExportProcessorOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "CHANGELOG.md",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": "CompositeProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\Builder\\ProviderBuilderServiceCollectionExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\CircularBuffer.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\InstrumentationScopeLogger.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\InterlockedHelper.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\OpenTelemetrySdkEventSource.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\SelfDiagnostics.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\SelfDiagnosticsConfigParser.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\SelfDiagnosticsConfigRefresher.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\SelfDiagnosticsEventListener.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Internal\\WildcardHelper.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Builder\\LoggerProviderBuilderBase.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Builder\\LoggerProviderBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Builder\\LoggerProviderBuilderSdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\ILogger\\OpenTelemetryLogger.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\ILogger\\OpenTelemetryLoggerOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\ILogger\\OpenTelemetryLoggerProvider.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\ILogger\\OpenTelemetryLoggingExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\LoggerProviderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\LoggerProviderSdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\LoggerSdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\LogRecord.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\LogRecordScope.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Pool\\ILogRecordPool.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Pool\\LogRecordPoolHelper.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Pool\\LogRecordSharedPool.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Pool\\LogRecordThreadStaticPool.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Processor\\BatchExportLogRecordProcessorOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Processor\\BatchLogRecordExportProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Processor\\LogRecordExportProcessorOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\Processor\\SimpleLogRecordExportProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\AggregationTemporality.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\AggregationType.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\AggregatorStore.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Builder\\MeterProviderBuilderBase.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Builder\\MeterProviderBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Builder\\MeterProviderBuilderSdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\CircularBufferBuckets.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\AlignedHistogramBucketExemplarReservoir.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\Exemplar.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\ExemplarFilterType.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\ExemplarMeasurement.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\ExemplarReservoir.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\FixedSizeExemplarReservoir.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\ReadOnlyExemplarCollection.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Exemplar\\SimpleFixedSizeExemplarReservoir.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\ExportModes.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\ExportModesAttribute.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\IMetricsListener\\OpenTelemetryMetricsBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\IMetricsListener\\OpenTelemetryMetricsListener.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\IPullMetricExporter.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\LookupData.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MeterProviderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MeterProviderSdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Metric.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\Base2ExponentialBucketHistogram.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\ExponentialHistogramBuckets.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\ExponentialHistogramData.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\HistogramBucket.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\HistogramBuckets.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\MetricPoint.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\MetricPointOptionalComponents.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\MetricPointsAccessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\MetricPointStatus.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricPoint\\MetricPointValueStorage.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricState.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricStreamIdentity.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricType.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MetricTypeExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\PullMetricScope.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\BaseExportingMetricReader.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\CompositeMetricReader.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\CompositeMetricReaderExt.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\MetricReader.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\MetricReaderExt.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\MetricReaderOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\MetricReaderTemporalityPreference.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\PeriodicExportingMetricReader.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Reader\\PeriodicExportingMetricReaderOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\StringArrayEqualityComparer.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Tags.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\ThreadStaticStorage.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\View\\Base2ExponentialBucketHistogramConfiguration.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\View\\ExplicitBucketHistogramConfiguration.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\View\\HistogramConfiguration.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\View\\MetricStreamConfiguration.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "OpenTelemetry.csproj",
+    "Action": ""
+  },
+  {
+    "RelativePath": "OpenTelemetryBuilderSdkExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "OpenTelemetrySdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "OpenTelemetrySdkExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "ProviderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "README.md",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": "ReadOnlyFilteredTagCollection.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "ReadOnlyTagCollection.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Resources\\IResourceDetector.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Resources\\OtelEnvResourceDetector.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Resources\\OtelServiceNameEnvVarDetector.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Resources\\Resource.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Resources\\ResourceBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Resources\\ResourceBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Sdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "SimpleExportProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "SuppressInstrumentationScope.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Builder\\TracerProviderBuilderBase.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Builder\\TracerProviderBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Builder\\TracerProviderBuilderSdk.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Processor\\ActivityExportProcessorOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Processor\\BatchActivityExportProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Processor\\BatchExportActivityProcessorOptions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Processor\\ExceptionProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Processor\\SimpleActivityExportProcessor.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\AlwaysOffSampler.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\AlwaysOnSampler.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\ParentBasedSampler.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\Sampler.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\SamplingDecision.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\SamplingParameters.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\SamplingResult.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\Sampler\\TraceIdRatioBasedSampler.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\TracerProviderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\TracerProviderSdk.cs",
+    "Action": ""
+  }
+]

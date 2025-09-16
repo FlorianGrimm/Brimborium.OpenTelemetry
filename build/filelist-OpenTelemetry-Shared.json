@@ -1,0 +1,186 @@
+[
+  {
+    "RelativePath": "ActivityHelperExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "AssemblyVersionExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Configuration\\IConfigurationExtensionsLogger.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Configuration\\OpenTelemetryConfigurationExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "DiagnosticDefinitions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "EnvironmentVariables\\EnvironmentVariablesConfigurationProvider.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "EnvironmentVariables\\EnvironmentVariablesConfigurationSource.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "EnvironmentVariables\\EnvironmentVariablesExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "ExceptionExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Guard.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "MathHelper.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\Base2ExponentialBucketHistogramHelper.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Options\\DelegatingOptionsFactory.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Options\\DelegatingOptionsFactoryServiceCollectionExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Options\\SingletonOptionsManager.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "PeriodicExportingMetricReaderHelper.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\google\\rpc\\error_details.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\google\\rpc\\status.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\logs\\v1\\logs_service_http.yaml",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\logs\\v1\\logs_service.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\metrics\\v1\\metrics_service_http.yaml",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\metrics\\v1\\metrics_service.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\profiles\\v1development\\profiles_service_http.yaml",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\profiles\\v1development\\profiles_service.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\README.md",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\trace\\v1\\trace_service_http.yaml",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\collector\\trace\\v1\\trace_service.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\common\\v1\\common.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\logs\\v1\\logs.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\metrics\\v1\\metrics.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\profiles\\v1development\\profiles.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\resource\\v1\\resource.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\opentelemetry\\proto\\trace\\v1\\trace.proto",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Proto\\README.md",
+    "Action": ""
+  },
+  {
+    "RelativePath": "ResourceSemanticConventions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "SemanticConventions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Shims\\ExperimentalAttribute.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Shims\\IsExternalInit.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Shims\\Lock.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Shims\\NullableAttributes.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "SpanAttributeConstants.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "StatusHelper.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "TagWriter\\ArrayTagWriter.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "TagWriter\\JsonStringArrayTagWriter.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "TagWriter\\TagWriter.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "ThreadSafeRandom.cs",
+    "Action": ""
+  }
+]

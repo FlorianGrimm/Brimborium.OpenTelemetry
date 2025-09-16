@@ -1,0 +1,90 @@
+[
+  {
+    "RelativePath": ".publicApi\\Experimental\\PublicAPI.Unshipped.txt",
+    "Action": ""
+  },
+  {
+    "RelativePath": ".publicApi\\Stable\\PublicAPI.Shipped.txt",
+    "Action": ""
+  },
+  {
+    "RelativePath": ".publicApi\\Stable\\PublicAPI.Unshipped.txt",
+    "Action": ""
+  },
+  {
+    "RelativePath": "CHANGELOG.md",
+    "Action": ""
+  },
+  {
+    "RelativePath": "IOpenTelemetryBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\IConfigureLoggerProviderBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\ILoggerProviderBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\LoggerProviderServiceCollectionBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\OpenTelemetryDependencyInjectionLoggerProviderBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Logs\\OpenTelemetryDependencyInjectionLoggingServiceCollectionExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\IConfigureMeterProviderBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\IMeterProviderBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\MeterProviderServiceCollectionBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\OpenTelemetryDependencyInjectionMeterProviderBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Metrics\\OpenTelemetryDependencyInjectionMetricsServiceCollectionExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "OpenTelemetry.Api.ProviderBuilderExtensions.csproj",
+    "Action": ""
+  },
+  {
+    "RelativePath": "README.md",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\IConfigureTracerProviderBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\ITracerProviderBuilder.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\OpenTelemetryDependencyInjectionTracerProviderBuilderExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\OpenTelemetryDependencyInjectionTracingServiceCollectionExtensions.cs",
+    "Action": ""
+  },
+  {
+    "RelativePath": "Trace\\TracerProviderServiceCollectionBuilder.cs",
+    "Action": ""
+  }
+]
