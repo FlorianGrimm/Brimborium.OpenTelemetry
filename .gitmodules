@@ -1,0 +1,6 @@
+[submodule "SubModule/opentelemetry-dotnet"]
+	path = SubModule/opentelemetry-dotnet
+	url = https://github.com/open-telemetry/opentelemetry-dotnet.git
+[submodule "SubModule/opentelemetry-dotnet-contrib"]
+	path = SubModule/opentelemetry-dotnet-contrib
+	url = https://github.com/open-telemetry/opentelemetry-dotnet-contrib.git
