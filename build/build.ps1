@@ -185,17 +185,21 @@ class FileContentList {
                 if ((Test-Path $srcPath) -and -not(Test-Path $dstPath)) {
                     [System.IO.File]::Copy($srcPath, $dstPath, $true)
                     write-host "copy: $($relativeFile.RelativePath)"
-                } else {
+                }
+                else {
                     [string]$srcFileContent = $this.ReadFile($relativeFile.RelativePath)
                     [string]$dstFileContent = $dst.ReadFile($relativeFile.RelativePath)
-                    if ($srcFileContent -ne $dstFileContent) {
+                    if ($this.CompareFileContent($srcFileContent, $dstFileContent)) {
+                        # no change
+                    }
+                    else {
                         $dst.WriteFile($relativeFile.RelativePath, $srcFileContent)
                         write-host "copy: $($relativeFile.RelativePath)"
                     }
                 }
             }
             if ($relativeFile.Action -eq "delete") {
-                if($dst.DeleteFile($relativeFile.RelativePath)){
+                if ($dst.DeleteFile($relativeFile.RelativePath)) {
                     write-host "delete: $($relativeFile.RelativePath)"
                 }
             }
@@ -228,12 +232,26 @@ class FileContentList {
         }
         return $false
     }
+    [bool] CompareFileContent($srcFileContent, $dstFileContent) {
+        if ($srcFileContent -eq $dstFileContent) {
+            return $true
+        }
+        $srcFileContent = $srcFileContent.ReplaceLineEndings()
+        $dstFileContent = $dstFileContent.ReplaceLineEndings()
+        if ($srcFileContent -eq $dstFileContent) {
+            return $true
+        }
+        return $false
+    }
     Diff([FileContentList] $dst) {
         foreach ($relativeFile in $this.DictFileAction.Values) {
             if ($relativeFile.Action -eq "copy" -or $relativeFile.Action -eq "") {
                 [string]$srcFileContent = $this.ReadFile($relativeFile.RelativePath)
                 [string]$dstFileContent = $dst.ReadFile($relativeFile.RelativePath)
-                if ($srcFileContent -ne $dstFileContent) {
+                if ($this.CompareFileContent($srcFileContent, $dstFileContent)) {
+                    # no change
+                }
+                else {
                     write-host "diff: $($relativeFile.RelativePath)"
                 }
             }
@@ -244,7 +262,8 @@ class FileContentList {
             if ($relativeFile.Action -eq "") {
                 [string]$srcFileContent = $this.ReadFile($relativeFile.RelativePath)
                 [string]$dstFileContent = $dst.ReadFile($relativeFile.RelativePath)
-                if ($srcFileContent -eq $dstFileContent) {
+                if ($this.CompareFileContent($srcFileContent, $dstFileContent)) {
+                    # ok
                     $relativeFile.Action = "copy"
                     write-host "copy: $($relativeFile.RelativePath)"
                 }
@@ -260,7 +279,7 @@ class FileContentList {
             elseif ($relativeFile.Action -eq "copy") {
                 [string]$srcFileContent = $this.ReadFile($relativeFile.RelativePath)
                 [string]$dstFileContent = $dst.ReadFile($relativeFile.RelativePath)
-                if ($srcFileContent -eq $dstFileContent) {
+                if ($this.CompareFileContent($srcFileContent, $dstFileContent)) {
                     # ok
                 }
                 elseif ($srcFileContent -eq "") {
@@ -271,7 +290,7 @@ class FileContentList {
                     $relativeFile.Action = "delete"
                     write-host "delete: $($relativeFile.RelativePath)"
                 }
-                elseif ($srcFileContent -ne $dstFileContent) {
+                else {
                     $relativeFile.Action = "diff"
                     write-host "diff: $($relativeFile.RelativePath)"
                 }
