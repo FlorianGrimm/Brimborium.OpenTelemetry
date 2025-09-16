@@ -1,0 +1,34 @@
+[
+  {
+    "RelativePath": ".publicApi\\PublicAPI.Shipped.txt",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": ".publicApi\\PublicAPI.Unshipped.txt",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "CHANGELOG.md",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": "MeterProviderBuilderExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "OpenTelemetry.Instrumentation.Runtime.csproj",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "README.md",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": "RuntimeInstrumentationOptions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "RuntimeMetrics.cs",
+    "Action": "copy"
+  }
+]

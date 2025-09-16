@@ -1,90 +1,90 @@
 [
   {
     "RelativePath": ".publicApi\\Experimental\\PublicAPI.Unshipped.txt",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": ".publicApi\\Stable\\PublicAPI.Shipped.txt",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": ".publicApi\\Stable\\PublicAPI.Unshipped.txt",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "CHANGELOG.md",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": "IOpenTelemetryBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\IConfigureLoggerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\ILoggerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LoggerProviderServiceCollectionBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\OpenTelemetryDependencyInjectionLoggerProviderBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\OpenTelemetryDependencyInjectionLoggingServiceCollectionExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\IConfigureMeterProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\IMeterProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MeterProviderServiceCollectionBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\OpenTelemetryDependencyInjectionMeterProviderBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\OpenTelemetryDependencyInjectionMetricsServiceCollectionExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "OpenTelemetry.Api.ProviderBuilderExtensions.csproj",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "README.md",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": "Trace\\IConfigureTracerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\ITracerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\OpenTelemetryDependencyInjectionTracerProviderBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\OpenTelemetryDependencyInjectionTracingServiceCollectionExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\TracerProviderServiceCollectionBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   }
 ]

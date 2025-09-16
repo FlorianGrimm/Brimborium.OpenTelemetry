@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <ArtifactsPath>$([System.IO.Path]::Combine('$(MSBuildThisFileDirectory)', 'artifacts'))</ArtifactsPath>
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <RepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</RepoRoot>
+    <NoWarn>$(NoWarn);SA1201;SA1202;SA1204;SA1311;SA1123;NU1510</NoWarn>
+  </PropertyGroup>
+</Project>

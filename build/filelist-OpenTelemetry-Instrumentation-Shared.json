@@ -1,0 +1,182 @@
+[
+  {
+    "RelativePath": "ActivityHelperExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "ActivityInstrumentationHelper.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AssemblyVersionExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AWS\\AWSSemanticConventions.Base.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AWS\\AWSSemanticConventions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AWS\\AWSSemanticConventions.Legacy.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AWS\\AWSSemanticConventions.v1.28.0.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AWS\\AWSSemanticConventions.v1.29.0.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AWS\\SemanticConventionVersion.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Configuration\\IConfigurationExtensionsLogger.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Configuration\\OpenTelemetryConfigurationExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "DatabaseSemanticConventionHelper.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "DiagnosticSourceListener.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "DiagnosticSourceSubscriber.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "EnvironmentVariables\\EnvironmentVariablesConfigurationProvider.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "EnvironmentVariables\\EnvironmentVariablesConfigurationSource.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "EnvironmentVariables\\EnvironmentVariablesExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "ExceptionExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "GrpcStatusCanonicalCode.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "GrpcTagHelper.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Guard.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "HttpRequestMessageContextPropagation.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "InstrumentationHandleManager.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "IServerCertificateValidationEventSource.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "IsExternalInit.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "ListenerHandler.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Lock.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "MultiTypePropertyFetcher.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "NullableAttributes.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Options\\DelegatingOptionsFactory.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Options\\DelegatingOptionsFactoryServiceCollectionExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Options\\SingletonOptionsManager.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "PropertyFetcher.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "RedactionHelper.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "RequestDataHelper.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "ResourceSemanticConventions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "SemanticConventions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "ServerCertificateValidationHandler.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "ServerCertificateValidationProvider.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "SpanHelper.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "SqlConnectionDetails.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "SqlParameterProcessor.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "SqlProcessor.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "SqlStatementInfo.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "UriHelper.cs",
+    "Action": "copy"
+  }
+]

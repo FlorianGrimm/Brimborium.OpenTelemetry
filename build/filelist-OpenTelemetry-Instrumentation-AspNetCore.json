@@ -1,0 +1,58 @@
+[
+  {
+    "RelativePath": ".publicApi\\PublicAPI.Shipped.txt",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": ".publicApi\\PublicAPI.Unshipped.txt",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": "AspNetCoreInstrumentation.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AspNetCoreInstrumentationMeterProviderBuilderExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AspNetCoreInstrumentationTracerProviderBuilderExtensions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AspNetCoreMetrics.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "AspNetCoreTraceInstrumentationOptions.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "CHANGELOG.md",
+    "Action": "delete"
+  },
+  {
+    "RelativePath": "Implementation\\AspNetCoreInstrumentationEventSource.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Implementation\\HttpInListener.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Implementation\\HttpInMetricsListener.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "Implementation\\TelemetryHelper.cs",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "OpenTelemetry.Instrumentation.AspNetCore.csproj",
+    "Action": "copy"
+  },
+  {
+    "RelativePath": "README.md",
+    "Action": "delete"
+  }
+]

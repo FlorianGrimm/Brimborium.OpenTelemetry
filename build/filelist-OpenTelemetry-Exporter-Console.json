@@ -1,66 +1,66 @@
 [
   {
     "RelativePath": ".publicApi\\Experimental\\PublicAPI.Unshipped.txt",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": ".publicApi\\Stable\\PublicAPI.Shipped.txt",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": ".publicApi\\Stable\\PublicAPI.Unshipped.txt",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "CHANGELOG.md",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": "ConsoleActivityExporter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleExporter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleExporterHelperExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleExporterLoggingExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleExporterMetricsExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleExporterOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleExporterOutputTargets.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleLogRecordExporter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ConsoleMetricExporter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Implementation\\ConsoleTagWriter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "OpenTelemetry.Exporter.Console.csproj",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "README.md",
-    "Action": ""
+    "Action": "delete"
   }
 ]

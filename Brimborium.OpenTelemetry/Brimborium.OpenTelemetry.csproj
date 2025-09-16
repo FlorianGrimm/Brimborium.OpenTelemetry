@@ -4,6 +4,83 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>OpenTelemetry</RootNamespace>
   </PropertyGroup>
+  <!--
+  <PropertyGroup>
+    <TargetFrameworks>$(TargetFrameworksForLibraries)</TargetFrameworks>
+    <Description>Contains extensions to register OpenTelemetry in applications using Microsoft.Extensions.DependencyInjection</Description>
+  </PropertyGroup>
+  -->
+  <ItemGroup>
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" />
+    <PackageReference Include="System.Text.Json" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" />
+  </ItemGroup>
+<!--
+Brimborium.OpenTelemetry.Shared
+-->
 
+  <ItemGroup>
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\ActivityHelperExtensions.cs" Link="OpenTelemetry\Includes\ActivityHelperExtensions.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\AssemblyVersionExtensions.cs" Link="OpenTelemetry\Includes\AssemblyVersionExtensions.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\Configuration\*.cs" Link="OpenTelemetry\Includes\Configuration\%(Filename).cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\DiagnosticDefinitions.cs" Link="OpenTelemetry\Includes\DiagnosticDefinitions.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\EnvironmentVariables\*.cs" Link="OpenTelemetry\Includes\EnvironmentVariables\%(Filename).cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\ExceptionExtensions.cs" Link="OpenTelemetry\Includes\ExceptionExtensions.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\Guard.cs" Link="OpenTelemetry\Includes\Guard.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\MathHelper.cs" Link="OpenTelemetry\Includes\MathHelper.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\Metrics\Base2ExponentialBucketHistogramHelper.cs" Link="OpenTelemetry\Includes\Metrics\Base2ExponentialBucketHistogramHelper.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\Options\*.cs" Link="OpenTelemetry\Includes\Options\%(Filename).cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\PeriodicExportingMetricReaderHelper.cs" Link="OpenTelemetry\Includes\PeriodicExportingMetricReaderHelper.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\ResourceSemanticConventions.cs" Link="OpenTelemetry\Includes\ResourceSemanticConventions.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\SemanticConventions.cs" Link="OpenTelemetry\Includes\SemanticConventions.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\Shims\ExperimentalAttribute.cs" Link="OpenTelemetry\Includes\Shims\ExperimentalAttribute.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\Shims\Lock.cs" Link="OpenTelemetry\Includes\Shims\Lock.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\Shims\NullableAttributes.cs" Link="OpenTelemetry\Includes\Shims\NullableAttributes.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\SpanAttributeConstants.cs" Link="OpenTelemetry\Includes\SpanAttributeConstants.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\StatusHelper.cs" Link="OpenTelemetry\Includes\StatusHelper.cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\TagWriter\*.cs" Link="OpenTelemetry\Includes\TagWriter\%(Filename).cs" />
+    <Compile Include="$(RepoRoot)\Brimborium.OpenTelemetry.Shared\ThreadSafeRandom.cs" Link="OpenTelemetry\Includes\ThreadSafeRandom.cs" />
+  </ItemGroup>
+  <!--
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.Console" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.InMemory" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.OpenTelemetryProtocol.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.Prometheus.AspNetCore.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.Prometheus.HttpListener.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Extensions.Hosting" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Extensions.Hosting.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Tests.Stress.Metrics" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="Benchmarks" PublicKey="$(StrongNamePublicKey)" />
+  </ItemGroup>  
+  <ItemGroup>
+    <InternalsVisibleTo Include="OpenTelemetry" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Api.ProviderBuilderExtensions" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Api.ProviderBuilderExtensions.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Api.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.Console" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.InMemory" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.OpenTelemetryProtocol.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Extensions.Hosting" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Extensions.Hosting.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Shims.OpenTracing.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Api.ProviderBuilderExtensions.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.Console" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Exporter.OpenTelemetryProtocol.Tests" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Extensions.Hosting" PublicKey="$(StrongNamePublicKey)" />
+    <InternalsVisibleTo Include="OpenTelemetry.Tests" PublicKey="$(StrongNamePublicKey)" />
+  </ItemGroup>
+  -->
 </Project>

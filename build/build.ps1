@@ -177,22 +177,27 @@ class FileContentList {
         foreach ($relativeFile in $this.DictFileAction.Values) {
             if ($relativeFile.Action -eq "copy" -or $relativeFile.Action -eq "") {
                 [string]$srcPath = $this.GetAbsolutePath($relativeFile.RelativePath)
-                if (Test-Path $srcPath) {
-                    [string]$dstPath = $dst.GetAbsolutePath($relativeFile.RelativePath)
-                    if (-not(Test-Path $dstPath)) {
-                        [string]$dstDirName = [System.IO.Path]::GetDirectoryName($dstPath)
-                        [System.IO.Directory]::CreateDirectory($dstDirName) | Out-Null
-                        [System.IO.File]::Copy($srcPath, $dstPath, $true)
-                    }
+                [string]$dstPath = $dst.GetAbsolutePath($relativeFile.RelativePath)
+                if (-not(Test-Path $dstPath)) {
+                    [string]$dstDirName = [System.IO.Path]::GetDirectoryName($dstPath)
+                    [System.IO.Directory]::CreateDirectory($dstDirName) | Out-Null
                 }
-                [string]$srcFileContent = $this.ReadFile($relativeFile.RelativePath)
-                [string]$dstFileContent = $dst.ReadFile($relativeFile.RelativePath)
-                if ($srcFileContent -ne $dstFileContent) {
-                    $dst.WriteFile($relativeFile.RelativePath, $srcFileContent)
+                if ((Test-Path $srcPath) -and -not(Test-Path $dstPath)) {
+                    [System.IO.File]::Copy($srcPath, $dstPath, $true)
+                    write-host "copy: $($relativeFile.RelativePath)"
+                } else {
+                    [string]$srcFileContent = $this.ReadFile($relativeFile.RelativePath)
+                    [string]$dstFileContent = $dst.ReadFile($relativeFile.RelativePath)
+                    if ($srcFileContent -ne $dstFileContent) {
+                        $dst.WriteFile($relativeFile.RelativePath, $srcFileContent)
+                        write-host "copy: $($relativeFile.RelativePath)"
+                    }
                 }
             }
             if ($relativeFile.Action -eq "delete") {
-                $dst.DeleteFile($relativeFile.RelativePath)
+                if($dst.DeleteFile($relativeFile.RelativePath)){
+                    write-host "delete: $($relativeFile.RelativePath)"
+                }
             }
         }
     }
@@ -215,23 +220,22 @@ class FileContentList {
         [string]$fullPath = $this.GetAbsolutePath($relativePath)
         [System.IO.File]::WriteAllText($fullPath, $content)
     }
-    DeleteFile([string] $relativePath) {
+    [bool]DeleteFile([string] $relativePath) {
         [string]$fullPath = $this.GetAbsolutePath($relativePath)
         if (Test-Path $fullPath) {
             Remove-Item $fullPath
+            return $true
         }
+        return $false
     }
     Diff([FileContentList] $dst) {
         foreach ($relativeFile in $this.DictFileAction.Values) {
-            if ($relativeFile.Action -eq "copy") {
+            if ($relativeFile.Action -eq "copy" -or $relativeFile.Action -eq "") {
                 [string]$srcFileContent = $this.ReadFile($relativeFile.RelativePath)
                 [string]$dstFileContent = $dst.ReadFile($relativeFile.RelativePath)
                 if ($srcFileContent -ne $dstFileContent) {
                     write-host "diff: $($relativeFile.RelativePath)"
                 }
-            }
-            if ($relativeFile.Action -eq "delete") {
-                write-host "delete: $($relativeFile.RelativePath)"
             }
         }
     }
@@ -249,8 +253,8 @@ class FileContentList {
                     write-host "delete: $($relativeFile.RelativePath)"
                 }
                 elseif ($dstFileContent -eq "") {
-                    $relativeFile.Action = "copy"
-                    write-host "copy: $($relativeFile.RelativePath)"
+                    $relativeFile.Action = "delete"
+                    write-host "delete: $($relativeFile.RelativePath)"
                 }
             }
             elseif ($relativeFile.Action -eq "copy") {
@@ -263,9 +267,13 @@ class FileContentList {
                     $relativeFile.Action = "delete"
                     write-host "delete: $($relativeFile.RelativePath)"
                 }
+                elseif ($dstFileContent -eq "") {
+                    $relativeFile.Action = "delete"
+                    write-host "delete: $($relativeFile.RelativePath)"
+                }
                 elseif ($srcFileContent -ne $dstFileContent) {
-                    $relativeFile.Action = "ignore"
-                    write-host "ignore: $($relativeFile.RelativePath)"
+                    $relativeFile.Action = "diff"
+                    write-host "diff: $($relativeFile.RelativePath)"
                 }
             }
             
@@ -372,6 +380,34 @@ $listContentMapping.Add(
         [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry", "OpenTelemetry", "OpenTelemetry.Exporter.Console")
     )
 )
+
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Instrumentation-Shared.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet-contrib", "src", "Shared"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry.Instrumentation.Shared")
+    )
+)
+
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Instrumentation-AspNetCore.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet-contrib", "src", "OpenTelemetry.Instrumentation.AspNetCore"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry.AspNetCore", "OpenTelemetry", "OpenTelemetry.Instrumentation.AspNetCore")
+    )
+)
+
+$listContentMapping.Add(
+    [ContentMapping]::Create(
+        $SolutionDir,
+        [System.IO.Path]::Combine($SolutionDir, "build", "filelist-OpenTelemetry-Instrumentation-Runtime.json"),
+        [System.IO.Path]::Combine($SolutionDir, "SubModule", "opentelemetry-dotnet-contrib", "src", "OpenTelemetry.Instrumentation.Runtime"),
+        [System.IO.Path]::Combine($SolutionDir, "Brimborium.OpenTelemetry.Runtime", "OpenTelemetry", "OpenTelemetry.Instrumentation.Runtime")
+    )
+)
+
 <#
 OpenTelemetry.Extensions.Hosting
 $listContentMapping.Add(

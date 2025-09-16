@@ -1,206 +1,206 @@
 [
   {
     "RelativePath": ".publicApi\\Experimental\\PublicAPI.Unshipped.txt",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": ".publicApi\\Stable\\net462\\PublicAPI.Shipped.txt",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": ".publicApi\\Stable\\net462\\PublicAPI.Unshipped.txt",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": ".publicApi\\Stable\\PublicAPI.Shipped.txt",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": ".publicApi\\Stable\\PublicAPI.Unshipped.txt",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": "ActivityContextExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Baggage.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "BaseProvider.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "CHANGELOG.md",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\AsyncLocalRuntimeContextSlot.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\IRuntimeContextSlotValueAccessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\B3Propagator.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\BaggagePropagator.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\CompositeTextMapPropagator.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\NoopTextMapPropagator.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\PropagationContext.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\Propagators.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\TextMapPropagator.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\TraceContextPropagator.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\Propagation\\TraceStateUtils.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\RemotingRuntimeContextSlot.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\RuntimeContext.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\RuntimeContextSlot.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Context\\ThreadLocalRuntimeContextSlot.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\OpenTelemetryApiEventSource.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\IDeferredLoggerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Logger.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LoggerProvider.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LoggerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LogRecordAttributeList.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LogRecordData.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LogRecordSeverity.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LogRecordSeverityExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\NoopLogger.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\IDeferredMeterProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MeterProvider.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MeterProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "OpenTelemetry.Api.csproj",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "README.md",
-    "Action": ""
+    "Action": "delete"
   },
   {
     "RelativePath": "Trace\\ActivityExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\IDeferredTracerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Link.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\SpanAttributes.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\SpanContext.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\SpanKind.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Status.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\StatusCode.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\TelemetrySpan.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Tracer.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\TracerProvider.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\TracerProviderBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   }
 ]

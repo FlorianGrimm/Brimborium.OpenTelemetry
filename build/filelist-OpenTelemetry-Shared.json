@@ -1,186 +1,186 @@
 [
   {
     "RelativePath": "ActivityHelperExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "AssemblyVersionExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Configuration\\IConfigurationExtensionsLogger.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Configuration\\OpenTelemetryConfigurationExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "DiagnosticDefinitions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "EnvironmentVariables\\EnvironmentVariablesConfigurationProvider.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "EnvironmentVariables\\EnvironmentVariablesConfigurationSource.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "EnvironmentVariables\\EnvironmentVariablesExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ExceptionExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Guard.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "MathHelper.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Base2ExponentialBucketHistogramHelper.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Options\\DelegatingOptionsFactory.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Options\\DelegatingOptionsFactoryServiceCollectionExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Options\\SingletonOptionsManager.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "PeriodicExportingMetricReaderHelper.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\google\\rpc\\error_details.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\google\\rpc\\status.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\logs\\v1\\logs_service_http.yaml",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\logs\\v1\\logs_service.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\metrics\\v1\\metrics_service_http.yaml",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\metrics\\v1\\metrics_service.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\profiles\\v1development\\profiles_service_http.yaml",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\profiles\\v1development\\profiles_service.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\README.md",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\trace\\v1\\trace_service_http.yaml",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\collector\\trace\\v1\\trace_service.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\common\\v1\\common.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\logs\\v1\\logs.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\metrics\\v1\\metrics.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\profiles\\v1development\\profiles.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\resource\\v1\\resource.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\opentelemetry\\proto\\trace\\v1\\trace.proto",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Proto\\README.md",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ResourceSemanticConventions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "SemanticConventions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Shims\\ExperimentalAttribute.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Shims\\IsExternalInit.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Shims\\Lock.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Shims\\NullableAttributes.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "SpanAttributeConstants.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "StatusHelper.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "TagWriter\\ArrayTagWriter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "TagWriter\\JsonStringArrayTagWriter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "TagWriter\\TagWriter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ThreadSafeRandom.cs",
-    "Action": ""
+    "Action": "copy"
   }
 ]

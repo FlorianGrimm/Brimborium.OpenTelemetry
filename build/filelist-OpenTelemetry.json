@@ -13,27 +13,27 @@
   },
   {
     "RelativePath": "BaseExporter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "BaseExportProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "BaseProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Batch.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "BatchExportProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "BatchExportProcessorOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "CHANGELOG.md",
@@ -41,367 +41,367 @@
   },
   {
     "RelativePath": "CompositeProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\Builder\\ProviderBuilderServiceCollectionExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\CircularBuffer.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\InstrumentationScopeLogger.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\InterlockedHelper.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\OpenTelemetrySdkEventSource.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\SelfDiagnostics.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\SelfDiagnosticsConfigParser.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\SelfDiagnosticsConfigRefresher.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\SelfDiagnosticsEventListener.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Internal\\WildcardHelper.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Builder\\LoggerProviderBuilderBase.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Builder\\LoggerProviderBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Builder\\LoggerProviderBuilderSdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\ILogger\\OpenTelemetryLogger.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\ILogger\\OpenTelemetryLoggerOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\ILogger\\OpenTelemetryLoggerProvider.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\ILogger\\OpenTelemetryLoggingExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LoggerProviderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LoggerProviderSdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LoggerSdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LogRecord.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\LogRecordScope.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Pool\\ILogRecordPool.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Pool\\LogRecordPoolHelper.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Pool\\LogRecordSharedPool.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Pool\\LogRecordThreadStaticPool.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Processor\\BatchExportLogRecordProcessorOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Processor\\BatchLogRecordExportProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Processor\\LogRecordExportProcessorOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Logs\\Processor\\SimpleLogRecordExportProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\AggregationTemporality.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\AggregationType.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\AggregatorStore.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Builder\\MeterProviderBuilderBase.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Builder\\MeterProviderBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Builder\\MeterProviderBuilderSdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\CircularBufferBuckets.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\AlignedHistogramBucketExemplarReservoir.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\Exemplar.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\ExemplarFilterType.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\ExemplarMeasurement.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\ExemplarReservoir.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\FixedSizeExemplarReservoir.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\ReadOnlyExemplarCollection.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Exemplar\\SimpleFixedSizeExemplarReservoir.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\ExportModes.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\ExportModesAttribute.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\IMetricsListener\\OpenTelemetryMetricsBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\IMetricsListener\\OpenTelemetryMetricsListener.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\IPullMetricExporter.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\LookupData.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MeterProviderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MeterProviderSdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Metric.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\Base2ExponentialBucketHistogram.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\ExponentialHistogramBuckets.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\ExponentialHistogramData.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\HistogramBucket.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\HistogramBuckets.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\MetricPoint.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\MetricPointOptionalComponents.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\MetricPointsAccessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\MetricPointStatus.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricPoint\\MetricPointValueStorage.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricState.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricStreamIdentity.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricType.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\MetricTypeExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\PullMetricScope.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\BaseExportingMetricReader.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\CompositeMetricReader.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\CompositeMetricReaderExt.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\MetricReader.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\MetricReaderExt.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\MetricReaderOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\MetricReaderTemporalityPreference.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\PeriodicExportingMetricReader.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Reader\\PeriodicExportingMetricReaderOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\StringArrayEqualityComparer.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\Tags.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\ThreadStaticStorage.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\View\\Base2ExponentialBucketHistogramConfiguration.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\View\\ExplicitBucketHistogramConfiguration.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\View\\HistogramConfiguration.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Metrics\\View\\MetricStreamConfiguration.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "OpenTelemetry.csproj",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "OpenTelemetryBuilderSdkExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "OpenTelemetrySdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "OpenTelemetrySdkExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ProviderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "README.md",
@@ -409,118 +409,118 @@
   },
   {
     "RelativePath": "ReadOnlyFilteredTagCollection.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "ReadOnlyTagCollection.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Resources\\IResourceDetector.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Resources\\OtelEnvResourceDetector.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Resources\\OtelServiceNameEnvVarDetector.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Resources\\Resource.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Resources\\ResourceBuilder.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Resources\\ResourceBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Sdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "SimpleExportProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "SuppressInstrumentationScope.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Builder\\TracerProviderBuilderBase.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Builder\\TracerProviderBuilderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Builder\\TracerProviderBuilderSdk.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Processor\\ActivityExportProcessorOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Processor\\BatchActivityExportProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Processor\\BatchExportActivityProcessorOptions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Processor\\ExceptionProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Processor\\SimpleActivityExportProcessor.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\AlwaysOffSampler.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\AlwaysOnSampler.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\ParentBasedSampler.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\Sampler.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\SamplingDecision.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\SamplingParameters.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\SamplingResult.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\Sampler\\TraceIdRatioBasedSampler.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\TracerProviderExtensions.cs",
-    "Action": ""
+    "Action": "copy"
   },
   {
     "RelativePath": "Trace\\TracerProviderSdk.cs",
-    "Action": ""
+    "Action": "copy"
   }
 ]
